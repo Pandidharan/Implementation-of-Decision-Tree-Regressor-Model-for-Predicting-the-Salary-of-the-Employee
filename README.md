@@ -8,10 +8,39 @@ To write a program to implement the Decision Tree Regressor Model for Predicting
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. Import the libraries and read the data frame using pandas.
-2. Calculate the null values present in the dataset and apply label encoder.
-3. Determine test and training data set and apply decison tree regression in dataset.
-4. calculate Mean square error,data prediction and r2. 
+1. **Load Dataset**  
+   - Import the dataset (`Salary.csv`) using pandas.  
+   - Display the first few rows and dataset information to inspect its structure.
+
+2. **Check for Missing Values**  
+   - Use `isnull().sum()` to check and ensure there are no missing values.
+
+3. **Encode Categorical Variables**  
+   - Use `LabelEncoder` to encode the categorical column (`Position`) into numeric format.
+
+4. **Define Features and Target**  
+   - Select the features (`Position`, `Level`) as `X`.  
+   - Set `Salary` as the target variable (`y`).
+
+5. **Split Data**  
+   - Split the dataset into training and testing sets using `train_test_split` with an 80-20 split.
+
+6. **Train Decision Tree Regressor**  
+   - Initialize a `DecisionTreeRegressor` instance.  
+   - Train the model on the training data (`x_train`, `y_train`).
+
+7. **Make Predictions**  
+   - Use the trained model to predict salaries for the testing set (`x_test`).  
+   - Predict salary for a custom input (e.g., `[[5, 6]]`).
+
+8. **Evaluate Model Performance**  
+   - Calculate performance metrics:  
+     - Mean Squared Error (MSE)  
+     - R-squared score (R²)  
+   - Optionally calculate additional metrics like Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE).
+
+9. **Output Results**  
+   - Display the performance metrics and predicted salary for the custom input. 
 
 
 ## Program:
